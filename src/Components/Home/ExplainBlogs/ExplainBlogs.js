@@ -20,7 +20,7 @@ const ExplainBlogs = (props) => {
   <img src={img} class="card-img-top" alt="..."/>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
-    <p class="card-text">{description.substring(0, 250)}......</p>
+    <p class="card-text">{description.substring(0, 250)}......................................</p>
     <a onClick={() => gotoBlogs(id)} class="btn btn-secondary">Read More</a>
   </div>
 </div>

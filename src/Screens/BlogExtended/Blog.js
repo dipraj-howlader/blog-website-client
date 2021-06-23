@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import { useHistory } from 'react-router';
-import { UserContext1 } from '../../../App';
+import { UserContext1 } from '../../App';
 const Blog = () => {
     const [blog, setBlog] = useContext(UserContext1);
     const history = useHistory();

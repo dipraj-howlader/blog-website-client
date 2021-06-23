@@ -2,11 +2,10 @@ import React, {useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { createContext } from 'react';
-import Blog from './Components/Home/Blog/Blog';
+import Blog from './Screens/BlogExtended/Blog';
 import FirstPage from './Screens/FirstPage/FirstPage';
 
 export const UserContext1 = createContext();
