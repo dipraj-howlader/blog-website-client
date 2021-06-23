@@ -1,0 +1,15 @@
+.blogs img{
+height: 300px;
+width: 400px;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.blogs{
+    justify-content: center;
+align-items: center;
+text-align: center;
+}
+.blogs p{
+    text-align:left;
+}
