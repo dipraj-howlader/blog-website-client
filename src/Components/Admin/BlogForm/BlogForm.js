@@ -3,8 +3,19 @@ import { useForm } from "react-hook-form";
 
 const BlogForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+
+
     const onSubmit = data => {
-        console.log(data.image[0].name);
+
+
+        fetch('http://localhost:5000/addBlog',{
+            method:'POST',
+             headers:{
+              'content-type':'application/json'
+          },
+          body: JSON.stringify(data)
+          })
+          .then(res => alert('Added successfully') )
     };
 
     return (
@@ -24,7 +35,7 @@ const BlogForm = () => {
 
         <div class="form-group">
     <label for="exampleFormControlFile1">Upload Image</label>
-    <input {...register("image")} type="file" class="form-control-file" id="exampleFormControlFile1" />
+    <input {...register("image")}  type="file" class="form-control-file" id="exampleFormControlFile1" />
   </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
