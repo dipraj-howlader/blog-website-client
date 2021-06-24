@@ -7,7 +7,7 @@ import {
 import { createContext } from 'react';
 import Blog from './Screens/BlogExtended/Blog';
 import FirstPage from './Screens/FirstPage/FirstPage';
-
+import BlogUpload from './Screens/BlogUpload/BlogUpload';
 export const UserContext1 = createContext();
 
 const App = () => {
@@ -17,14 +17,17 @@ const App = () => {
     <UserContext1.Provider value={[blog, setBlog]}>
     <Router>
       <Switch>
+      <Route exact path="/"> 
+          <FirstPage></FirstPage>
+        </Route>
         <Route path="/home">
           <FirstPage></FirstPage>
         </Route>
         <Route path="/blog/:id">
           <Blog></Blog>
         </Route>
-        <Route path="/"> 
-          <FirstPage></FirstPage>
+        <Route path="/uploadblog">
+          <BlogUpload></BlogUpload>
         </Route>
       </Switch>
     </Router>
