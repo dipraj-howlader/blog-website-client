@@ -6,22 +6,25 @@ import './ExplainBlogs.css';
 const ExplainBlogs = (props) => {
     const history = useHistory();
     const [blog, setBlog] = useContext(UserContext1);
+    console.log(props.blog)
+    const {_id, info, imageup} = props.blog;
+    const { title, description } = info;
+    console.log(description);
 
-    const {id, title, img, description} = props.blog;
-    const gotoBlogs= (id) =>{
-        history.push(`/blog/${id}`);
-        if(props.blog.id === id){
+    const gotoBlogs= (_id) =>{
+        history.push(`/blog/${_id}`);
+        if(props.blog._id === _id){
             setBlog(props);
         }
     }
     return (
         <div>
         <div class="card mb-5 blogs ">
-  <img src={img} class="card-img-top" alt="..."/>
+  <img src={imageup} class="card-img-top" alt="..."/>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
-    <p class="card-text">{description.substring(0, 250)}......................................</p>
-    <a onClick={() => gotoBlogs(id)} class="btn btn-secondary">Read More</a>
+    <p class="card-text">{description?.substring(0, 250)}......................................</p>
+    <a onClick={() => gotoBlogs(_id)} class="btn btn-secondary">Read More</a>
   </div>
 </div>
 </div>

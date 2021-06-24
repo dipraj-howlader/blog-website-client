@@ -6,7 +6,9 @@ const Blog = () => {
     const history = useHistory();
 
 
-    const { title, img, description} = blog.blog;
+    const { info, imageup} = blog.blog;
+    const { title, description } = info;
+
     const gotoHomePage = () =>{
         history.push(`/home`)
     }
@@ -14,7 +16,7 @@ const Blog = () => {
 
         return (
             <div class="card mb-3">
-            <img src={img} class="card-img-top" alt="..." />
+            <img src={imageup} class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{title}</h5>
               <p class="card-text">{description}</p>
