@@ -11,8 +11,16 @@ const Blogs = () => {
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[])
+    console.log(blogs?.length)
     return (
         <div>
+            {
+                blogs?.length=== undefined && <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+            }
             {
                 blogs?.map(blog => <ExplainBlogs key={blog._id} blog={blog}></ExplainBlogs> )
             }

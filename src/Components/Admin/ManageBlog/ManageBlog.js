@@ -15,6 +15,13 @@ const ManageBlog = () => {
         <div style={{justifyContent:'center',alignItems:'center',textAlign:'center'}} className="row">
             <AdminHeader></AdminHeader>
             {
+                manBlogs?.length=== undefined && <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+            }
+            {
                 manBlogs?.map(manageeBlog => <DeleteBlog key={manageeBlog._id} manageeBlog={manageeBlog}></DeleteBlog>)
             }
         </div>

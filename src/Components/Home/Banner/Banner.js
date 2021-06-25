@@ -5,7 +5,7 @@ const Banner = () => {
   const history = useHistory();
 
     const gotoUploadBlog = () =>[
-      history.push('/uploadblog')
+      history.push('/login')
     ]
 
     return (

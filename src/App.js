@@ -10,18 +10,25 @@ import FirstPage from './Screens/FirstPage/FirstPage';
 import BlogUpload from './Screens/BlogUpload/BlogUpload';
 import ManageBlog from './Components/Admin/ManageBlog/ManageBlog';
 import Login from './Components/Admin/Login/Login';
-
+import PrivateRoute from './Components/Admin/PrivateRoute/PrivateRoute';
 
 
 export const UserContext1 = createContext();
+export const SignInContext = createContext();
 
 
 const App = () => {
-  const   [blog, setBlog] = useState();
+  const [loggedInUser, setLoggedInUser] =useState({
+    isSignedIn: true,
+    email: '',
+    password: '',
+    error :''
+  })
+   const   [blog, setBlog] = useState();
 
   return (
     <UserContext1.Provider value={[blog, setBlog]}>
- 
+      <SignInContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Switch>
       <Route exact path="/"> 
@@ -33,18 +40,18 @@ const App = () => {
         <Route path="/blog/:id">
           <Blog></Blog>
         </Route>
-        <Route path="/uploadblog">
+        <PrivateRoute path="/uploadblog">
           <BlogUpload></BlogUpload>
-        </Route>
-        <Route path="/deleteblog">
+        </PrivateRoute>
+        <PrivateRoute path="/deleteblog">
           <ManageBlog></ManageBlog>
-        </Route>
+        </PrivateRoute>
         <Route path="/login"> 
           <Login></Login>
         </Route>
       </Switch>
     </Router>
-
+    </SignInContext.Provider>
     </UserContext1.Provider>
   );
 };
