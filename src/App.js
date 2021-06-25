@@ -9,6 +9,9 @@ import Blog from './Screens/BlogExtended/Blog';
 import FirstPage from './Screens/FirstPage/FirstPage';
 import BlogUpload from './Screens/BlogUpload/BlogUpload';
 import ManageBlog from './Components/Admin/ManageBlog/ManageBlog';
+import Login from './Components/Admin/Login/Login';
+
+
 
 export const UserContext1 = createContext();
 
@@ -35,6 +38,9 @@ const App = () => {
         </Route>
         <Route path="/deleteblog">
           <ManageBlog></ManageBlog>
+        </Route>
+        <Route path="/login"> 
+          <Login></Login>
         </Route>
       </Switch>
     </Router>
