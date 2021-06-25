@@ -8,13 +8,17 @@ import { createContext } from 'react';
 import Blog from './Screens/BlogExtended/Blog';
 import FirstPage from './Screens/FirstPage/FirstPage';
 import BlogUpload from './Screens/BlogUpload/BlogUpload';
+import ManageBlog from './Components/Admin/ManageBlog/ManageBlog';
 export const UserContext1 = createContext();
+export const UserContext2 = createContext();
+
 
 const App = () => {
   const   [blog, setBlog] = useState();
 
   return (
     <UserContext1.Provider value={[blog, setBlog]}>
+ 
     <Router>
       <Switch>
       <Route exact path="/"> 
@@ -29,8 +33,12 @@ const App = () => {
         <Route path="/uploadblog">
           <BlogUpload></BlogUpload>
         </Route>
+        <Route path="/deleteblog">
+          <ManageBlog></ManageBlog>
+        </Route>
       </Switch>
     </Router>
+
     </UserContext1.Provider>
   );
 };

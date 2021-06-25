@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React ,{useState} from 'react';
 import { useForm } from "react-hook-form";
+import AdminHeader from '../AdminHeader/AdminHeader';
 
 const BlogForm = () => {
     const [imageup, setImageup] = useState(null);
@@ -48,6 +49,7 @@ const BlogForm = () => {
 
     return (
         <div>
+            <AdminHeader></AdminHeader>
             <form  onSubmit={handleSubmit(onSubmit)} class="form-group">
 
       <input  {...register("title", { required: true })}  class="form-control form-control-lg" type="text" placeholder="Blog Title" />
