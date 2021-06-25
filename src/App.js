@@ -9,8 +9,8 @@ import Blog from './Screens/BlogExtended/Blog';
 import FirstPage from './Screens/FirstPage/FirstPage';
 import BlogUpload from './Screens/BlogUpload/BlogUpload';
 import ManageBlog from './Components/Admin/ManageBlog/ManageBlog';
+
 export const UserContext1 = createContext();
-export const UserContext2 = createContext();
 
 
 const App = () => {
