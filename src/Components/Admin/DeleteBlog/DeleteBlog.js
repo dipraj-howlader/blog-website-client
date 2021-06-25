@@ -5,7 +5,7 @@ const DeleteBlog = (props) => {
     const {title , description} = info;
 
     const handleblogdelete = (_id) =>{
-        fetch(`http://localhost:5000/delete/${_id}`,{
+        fetch(`https://morning-forest-07938.herokuapp.com/delete/${_id}`,{
             method:'DELETE',
         })
         .then(res => res.json())

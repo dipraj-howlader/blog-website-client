@@ -7,7 +7,7 @@ import ExplainBlogs from '../ExplainBlogs/ExplainBlogs';
 const Blogs = () => {
     const [blogs, setBlogs] = useState(null);
     useEffect(() =>{
-        fetch('http://localhost:5000/blogs')
+        fetch('https://morning-forest-07938.herokuapp.com/blogs')
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[])

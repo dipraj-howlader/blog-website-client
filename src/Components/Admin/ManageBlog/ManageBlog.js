@@ -7,7 +7,7 @@ const ManageBlog = () => {
 
     const [manBlogs, setManBlogs] = useState(null)
     useEffect(() =>{
-        fetch('http://localhost:5000/blogs')
+        fetch('https://morning-forest-07938.herokuapp.com/blogs')
         .then(res => res.json())
         .then(data => setManBlogs(data))
     },[])

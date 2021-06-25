@@ -34,7 +34,7 @@ const BlogForm = () => {
             imageup
         }
 
-        fetch('http://localhost:5000/addBlog',{
+        fetch('https://morning-forest-07938.herokuapp.com/addBlog',{
             method:'POST',
              headers:{
               'content-type':'application/json'
