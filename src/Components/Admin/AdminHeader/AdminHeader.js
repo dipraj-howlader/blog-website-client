@@ -15,7 +15,7 @@ const AdminHeader = () => {
     }
     return (
         <div className="text-center">
-            <button onClick={gotoBlog} className="m-3 btn btn-success">Add Blog</button>
+            <button onClick={gotoBlog} className="m-3  btn btn-success">Add Blog</button>
             <button onClick={gotoDeleteBlog} className="m-3 btn btn-success"> Delete Blog</button>
             <button onClick={gotoHome} className="m-3 btn btn-success">Home</button>
       

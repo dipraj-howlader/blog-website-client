@@ -1,0 +1,11 @@
+.blogContainer img{
+height: 400px;
+
+}
+.blogContainer {
+    text-align: center;
+}
+.blogContainer p{
+text-align: left;
+}
+

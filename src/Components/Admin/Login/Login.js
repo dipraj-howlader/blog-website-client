@@ -4,6 +4,8 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { SignInContext } from '../../../App';
 import { useHistory, useLocation } from 'react-router-dom';
+import './Login.css';
+
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
@@ -57,20 +59,26 @@ const handleLogin =(e) => {
     return (
 
 
-<div style={{textAlign:'center'}}>
+<div className="login-container">
             <h1>Admin Login</h1>
             <form action="" onSubmit={handleLogin}>
-                <input type="text" name="email" onBlur={handleEmail} placeholder="email" required / >
+                <input type="text" name="email" onBlur={handleEmail} placeholder="Email" required / >
                 <br />
-                <input type="password" name="password" onBlur={handlePassword}  placeholder="password" required/>
+                <input type="password" name="password" onBlur={handlePassword}  placeholder="Password" required/>
                 <br />
-                <input type="submit" value="Login" />
+                <button className="btn btn-success" type="submit" value="Login" > Login </button>
             </form>
+            <br />
             {
               !loggedInUser.isSignedIn &&   <p style={{color:'red'}}>You have entered wrong Information</p>
 
     
             }
+            <br />
+            <br />
+            <br />
+            <small>Developed by <a href="https://www.linkedin.com/in/dipraj-howlader/" target="_blank"> <span style={{backgroundColor:'violet',color:'white', borderRadius:'5px',padding:'5px', textDecoration:'none'}}> Dipraj Howlader </span> </a></small>
+
         </div>
     );
 };

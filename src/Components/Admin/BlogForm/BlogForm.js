@@ -48,7 +48,7 @@ const BlogForm = () => {
     };
 
     return (
-        <div>
+        <div className="text-center">
             <AdminHeader></AdminHeader>
             <form  onSubmit={handleSubmit(onSubmit)} class="form-group">
 
@@ -60,14 +60,16 @@ const BlogForm = () => {
         </div>
         <br />
         <br />
-        <br />
 
         <div class="form-group">
-    <label for="exampleFormControlFile1">Upload Image</label>
-    <input onChange={handleImageUpload} type="file" class="form-control-file" id="exampleFormControlFile1" />
+    <label  for="exampleFormControlFile1">Upload Image</label>
+    <input  onChange={handleImageUpload} type="file" class="form-control-file" id="exampleFormControlFile1" />
   </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+  <br />
+        <button style={{marginBottom:'10px'}} type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <br />
+
         </div>
     );
 };

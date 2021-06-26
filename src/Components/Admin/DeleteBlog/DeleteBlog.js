@@ -1,4 +1,5 @@
 import React from 'react';
+import './DeleteBlog.css';
 
 const DeleteBlog = (props) => {
     const {_id, info, imageup} = props.manageeBlog;
@@ -19,8 +20,8 @@ const DeleteBlog = (props) => {
         
     }
     return (
-        <div className="col-md-4 col-12">
-                <div class="card" style={{width: '18rem'}}>
+        <div className="col-md-4 col-12 delete-cont">
+                <div className="card card-conn" style={{width: '18rem'}}>
   <img className="card-img-top" src={imageup} alt="Card image cap" />
   <div class="card-body">
     <h5 class="card-title">{title}</h5>

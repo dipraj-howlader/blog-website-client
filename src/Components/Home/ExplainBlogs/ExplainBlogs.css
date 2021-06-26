@@ -13,3 +13,8 @@ text-align: center;
 .blogs p{
     text-align:left;
 }
+@media only screen and (max-width: 600px) {
+    .blogs img{
+        width: 350px;
+    }
+  }

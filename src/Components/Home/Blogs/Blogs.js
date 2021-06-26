@@ -11,7 +11,6 @@ const Blogs = () => {
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[])
-    console.log(blogs?.length)
     return (
         <div>
             {
